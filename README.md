@@ -56,9 +56,135 @@ chmod +x run.sh
 ./run.sh
 ```
 
-## API Endpoint
+## Deployment
 
-### GET /recommend
+### Option 1: Render.com (Recommended - Free)
+
+1. Push your code to GitHub
+2. Go to [render.com](https://render.com) and sign up/login
+3. Click "New +" → "Web Service"
+4. Connect your GitHub repository
+5. Configure:
+   - **Name**: shl-recommender
+   - **Environment**: Python 3
+   - **Build Command**: `pip install -r requirements.txt && python train_and_serialize.py`
+   - **Start Command**: `uvicorn src.app:app --host 0.0.0.0 --port $PORT`
+   - **Environment Variables**: Add `PYTHONHASHSEED=0`
+6. Click "Create Web Service"
+7. Wait for deployment (5-10 minutes)
+8. Your app will be available at `https://shl-recommender.onrender.com`
+
+### Option 2: Railway.app
+
+1. Push your code to GitHub
+2. Go to [railway.app](https://railway.app) and sign up
+3. Click "New Project" → "Deploy from GitHub repo"
+4. Select your repository
+5. Railway will auto-detect the Dockerfile and deploy
+6. Your app will be available at a Railway-provided URL
+
+### Option 3: Heroku
+
+1. Install Heroku CLI
+2. Run:
+   ```bash
+   heroku create shl-recommender
+   heroku config:set PYTHONHASHSEED=0
+   git push heroku main
+   ```
+
+## API Endpoints
+
+### 1. Text Search Endpoint
+
+**GET** `/search?query=<text>&k=<number>`
+
+Search for products by text query. Searches in product name, description, brand, and category.
+
+**Query Parameters:**
+- `query` (required): Text query to search for
+- `k` (optional, default=10): Number of results to return
+
+**Example Request:**
+
+```bash
+curl "http://localhost:8000/search?query=headphones&k=5"
+```
+
+**Example Response:**
+
+```json
+{
+  "query": "headphones",
+  "total_results": 3,
+  "items": [
+    {
+      "product_id": "prod_1",
+      "product_name": "Wireless Bluetooth Headphones",
+      "brand": "AudioTech",
+      "category": "Electronics",
+      "price": 129.99,
+      "description": "High-quality wireless headphones with noise cancellation..."
+    },
+    {
+      "product_id": "prod_15",
+      "product_name": "Noise Cancelling Headphones",
+      "brand": "AudioTech",
+      "category": "Electronics",
+      "price": 199.99,
+      "description": "Over-ear headphones with active noise cancellation..."
+    }
+  ]
+}
+```
+
+### 2. Search and Recommend Endpoint
+
+**GET** `/search-and-recommend?query=<text>&k=<number>&alpha=<0-1>`
+
+Search for a product by text, then get recommendations for the first match.
+
+**Query Parameters:**
+- `query` (required): Text query to find a product
+- `k` (optional, default=10): Number of recommendations to return
+- `alpha` (optional, default=0.6): Weight for content similarity (0-1)
+
+**Example Request:**
+
+```bash
+curl "http://localhost:8000/search-and-recommend?query=wireless%20headphones&k=10&alpha=0.6"
+```
+
+**Example Response:**
+
+```json
+{
+  "query": "wireless headphones",
+  "matched_product": {
+    "product_id": "prod_1",
+    "product_name": "Wireless Bluetooth Headphones",
+    "brand": "AudioTech",
+    "category": "Electronics"
+  },
+  "recommendations": [
+    {
+      "product_id": "prod_15",
+      "score": 0.847,
+      "reason": "strong content match & same brand"
+    },
+    {
+      "product_id": "prod_11",
+      "score": 0.732,
+      "reason": "high text similarity"
+    }
+  ],
+  "total_available": 49
+}
+```
+
+### 3. Product Recommendations
+
+**GET** `/recommend`
 
 Get product recommendations for a given product.
 
@@ -114,9 +240,29 @@ curl "http://localhost:8000/recommend?product_id=prod_1&k=10&alpha=0.6"
 }
 ```
 
+### 4. Health Check
+
+**GET** `/health`
+
+Check if the service is running.
+
+**Example Request:**
+
+```bash
+curl "http://localhost:8000/health"
+```
+
+**Example Response:**
+
+```json
+{
+  "status": "healthy"
+}
+```
+
 ## Architecture
 
-- **src/app.py**: FastAPI application with `/recommend` endpoint
+- **src/app.py**: FastAPI application with `/recommend`, `/search`, and `/search-and-recommend` endpoints
 - **src/model.py**: Recommender class with hybrid recommendation logic
 - **src/features.py**: TF-IDF vectorization and feature engineering
 - **src/utils.py**: Cursor encoding/decoding and utility functions
