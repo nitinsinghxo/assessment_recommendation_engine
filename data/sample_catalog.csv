@@ -1,0 +1,52 @@
+product_id,product_name,brand,category,description,price,created_at
+prod_1,Wireless Bluetooth Headphones,AudioTech,Electronics,High-quality wireless headphones with noise cancellation and 30-hour battery life,129.99,2023-01-15
+prod_2,Smart Fitness Watch,FitTrack,Wearables,Fitness tracker with heart rate monitor GPS and sleep tracking,199.99,2023-01-20
+prod_3,Portable Phone Charger,PowerUp,Electronics,20000mAh power bank with fast charging and USB-C port,39.99,2023-02-01
+prod_4,Ceramic Coffee Mug Set,HomeStyle,Home & Kitchen,Set of 4 ceramic mugs dishwasher safe and microwave safe,24.99,2023-02-05
+prod_5,LED Desk Lamp,BrightLight,Home & Office,Adjustable LED lamp with 5 brightness levels and USB charging port,45.99,2023-02-10
+prod_6,Wireless Mouse,ClickTech,Computer Accessories,Ergonomic wireless mouse with 2.4GHz connection and 12-month battery,29.99,2023-02-15
+prod_7,Yoga Mat Premium,FitTrack,Sports & Outdoors,Non-slip yoga mat with carrying strap and alignment lines,34.99,2023-02-20
+prod_8,Stainless Steel Water Bottle,Hydrate,Home & Kitchen,Insulated water bottle keeps drinks cold for 24 hours or hot for 12 hours,32.99,2023-03-01
+prod_9,Mechanical Keyboard,ClickTech,Computer Accessories,RGB backlit mechanical keyboard with blue switches and wrist rest,89.99,2023-03-05
+prod_10,Bluetooth Speaker,AudioTech,Electronics,Portable speaker with 360-degree sound and 20-hour battery life,79.99,2023-03-10
+prod_11,Wireless Earbuds,AudioTech,Electronics,True wireless earbuds with active noise cancellation and 8-hour battery,149.99,2023-03-15
+prod_12,Smart Home Hub,HomeTech,Electronics,Central hub for controlling smart home devices with voice assistant,129.99,2023-03-20
+prod_13,Standing Desk Converter,HomeStyle,Home & Office,Adjustable standing desk converter fits any desk up to 60 inches,249.99,2023-04-01
+prod_14,Resistance Bands Set,FitTrack,Sports & Outdoors,Set of 5 resistance bands with door anchor and exercise guide,29.99,2023-04-05
+prod_15,Noise Cancelling Headphones,AudioTech,Electronics,Over-ear headphones with active noise cancellation and 30-hour battery,199.99,2023-04-10
+prod_16,Wireless Charging Pad,PowerUp,Electronics,Fast wireless charging pad compatible with all Qi-enabled devices,34.99,2023-04-15
+prod_17,Ergonomic Office Chair,HomeStyle,Home & Office,Adjustable office chair with lumbar support and breathable mesh back,299.99,2023-04-20
+prod_18,Portable Bluetooth Speaker,AudioTech,Electronics,Compact speaker with waterproof design and 12-hour battery,49.99,2023-05-01
+prod_19,Smart Light Bulbs Pack,HomeTech,Electronics,Set of 4 smart LED bulbs with color changing and app control,59.99,2023-05-05
+prod_20,Wireless Gaming Headset,AudioTech,Electronics,Gaming headset with 7.1 surround sound and noise-cancelling mic,129.99,2023-05-10
+prod_21,Adjustable Laptop Stand,HomeStyle,Home & Office,Aluminum laptop stand with 9 height adjustments and ventilation,39.99,2023-05-15
+prod_22,Wireless Car Charger,PowerUp,Electronics,Magnetic wireless car charger with fast charging and secure mount,44.99,2023-05-20
+prod_23,Studio Monitor Headphones,AudioTech,Electronics,Professional studio headphones with flat frequency response,179.99,2023-06-01
+prod_24,Smart Thermostat,HomeTech,Electronics,WiFi-enabled thermostat with learning capabilities and energy reports,199.99,2023-06-05
+prod_25,Wireless Keyboard,ClickTech,Computer Accessories,Slim wireless keyboard with scissor switches and 2-year battery,59.99,2023-06-10
+prod_26,Portable Projector,HomeTech,Electronics,1080p portable projector with built-in speakers and HDMI input,299.99,2023-06-15
+prod_27,Wireless Mouse Pad,ClickTech,Computer Accessories,RGB gaming mouse pad with USB passthrough and water-resistant surface,34.99,2023-06-20
+prod_28,Smart Doorbell Camera,HomeTech,Electronics,Video doorbell with motion detection night vision and two-way audio,179.99,2023-07-01
+prod_29,Wireless Charging Stand,PowerUp,Electronics,Adjustable wireless charging stand for phone and watch simultaneously,54.99,2023-07-05
+prod_30,Noise Isolating Earbuds,AudioTech,Electronics,In-ear earbuds with noise isolation and 10-hour battery life,79.99,2023-07-10
+prod_31,Standing Desk Mat,HomeStyle,Home & Office,Anti-fatigue standing desk mat with gel cushioning and beveled edges,49.99,2023-07-15
+prod_32,Smart Security Camera,HomeTech,Electronics,Indoor security camera with 1080p video and motion alerts,89.99,2023-07-20
+prod_33,Wireless Headphone Stand,AudioTech,Home & Office,Aluminum headphone stand with USB charging port and cable management,29.99,2023-08-01
+prod_34,Portable Power Station,PowerUp,Electronics,300W portable power station with AC outlet and USB ports,199.99,2023-08-05
+prod_35,Smart Plug,HomeTech,Electronics,WiFi smart plug with energy monitoring and scheduling,24.99,2023-08-10
+prod_36,Wireless Presenter Remote,ClickTech,Computer Accessories,Wireless presenter remote with laser pointer and USB receiver,39.99,2023-08-15
+prod_37,Bluetooth Car Adapter,AudioTech,Electronics,Bluetooth adapter for cars with hands-free calling and music streaming,29.99,2023-08-20
+prod_38,Smart Door Lock,HomeTech,Electronics,Keyless smart door lock with fingerprint and app control,249.99,2023-09-01
+prod_39,Wireless Charging Car Mount,PowerUp,Electronics,Magnetic wireless charging car mount with one-hand operation,49.99,2023-09-05
+prod_40,USB-C Hub,ClickTech,Computer Accessories,7-in-1 USB-C hub with HDMI 4K and multiple USB ports,59.99,2023-09-10
+prod_41,Smart Smoke Detector,HomeTech,Electronics,WiFi-connected smoke detector with mobile alerts and battery monitoring,89.99,2023-09-15
+prod_42,Wireless Gaming Mouse,ClickTech,Computer Accessories,RGB gaming mouse with 16000 DPI sensor and 50-hour battery,79.99,2023-09-20
+prod_43,Portable Bluetooth Speaker Mini,AudioTech,Electronics,Ultra-compact speaker with 8-hour battery and clip-on design,24.99,2023-10-01
+prod_44,Smart Window Blinds,HomeTech,Home & Kitchen,Automated window blinds with app control and scheduling,199.99,2023-10-05
+prod_45,Wireless Charging Mouse Pad,PowerUp,Computer Accessories,Gaming mouse pad with wireless charging zone for compatible mice,69.99,2023-10-10
+prod_46,Smart Air Purifier,HomeTech,Electronics,HEPA air purifier with app control and air quality monitoring,299.99,2023-10-15
+prod_47,Wireless Headphones Sport,AudioTech,Electronics,Sweat-resistant wireless headphones with secure fit for workouts,99.99,2023-10-20
+prod_48,Smart Water Leak Sensor,HomeTech,Electronics,Wireless water leak sensor with mobile alerts and battery monitoring,39.99,2023-11-01
+prod_49,Wireless Keyboard Mouse Combo,ClickTech,Computer Accessories,Wireless keyboard and mouse combo with 2.4GHz connection,49.99,2023-11-05
+prod_50,Smart Ceiling Fan,HomeTech,Electronics,WiFi-enabled ceiling fan with app control and voice assistant,349.99,2023-11-10
+
